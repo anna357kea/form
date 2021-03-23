@@ -9,7 +9,7 @@
                 width: 300px;
                 background: white;
                 box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
-                padding: 50px 70px 70px 70px;
+                padding: 30px 70px 70px 70px;
                 }
             form {
             display: flex;
@@ -21,20 +21,40 @@
             input:placeholder-shown, textarea:placeholder-shown {border: 1px grey solid;}
 
             label {
-                font-family:fantasy;
+                font-family: sans-serif;
                 font-size: 18px;
                 text-transform: uppercase;
-                margin-top: 30px;
+                margin-top: 25px;
                 margin-bottom: 10px;
             }
             button {
-                margin-top: 30px;
-                height: 30px;
+                margin-top: 20px;
+                height: 40px;
+                color: white;
+                background-color:#0095BE;
+                opacity: 75%;
+                text-transform: uppercase;
+                font-family: sans-serif;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            button:hover {
+                opacity: 100%;
             }
 
             #form-name, #form-email {
-                height: 30px;
+                height: 40px;
                 width: auto;
+                border-radius: 5px;
+            }
+
+            #additional_info {
+                font-family: sans-serif;
+                font-size: 12px;
+                margin-top: 10px;
+                color: grey;
             }
 
         </style>
@@ -49,6 +69,7 @@
             <input id="form-email" type="email" name="email" placeholder="Your e-mail" required /> 
             <button>Sign up</button>
         </form>
+        <span id="additional_info">Personal info will not be shared with third parties</span>
     </div>
     </body>
 </html>
