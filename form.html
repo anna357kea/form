@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            #form_container {
+                width: 300px;
+                background: white;
+                box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+                padding: 50px 70px 70px 70px;
+                }
+            form {
+            display: flex;
+            flex-direction: column;
+            }
+
+            input:valid, textarea:valid {border: 1px green solid;}
+            input:invalid, textarea:invalid {border: 1px red solid;}
+            input:placeholder-shown, textarea:placeholder-shown {border: 1px grey solid;}
+
+            label {
+                font-family:fantasy;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-top: 30px;
+                margin-bottom: 10px;
+            }
+            button {
+                margin-top: 30px;
+                height: 30px;
+            }
+
+            #form-name, #form-email {
+                height: 30px;
+                width: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="form_container">
+        <form autocomplete="on" method='POST' data-netlify="true">
+            <label for="form-name">Name</label>
+            <input id="form-name" type="text" name="name" placeholder="Your first and last name" required /> 
+
+            <label for="form-email">E-mail</label>
+            <input id="form-email" type="email" name="email" placeholder="Your e-mail" required /> 
+            <button>Sign up</button>
+        </form>
+    </div>
+    </body>
+</html>
